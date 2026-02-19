@@ -1,0 +1,92 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding: 4rem 1rem;
+    overflow-x: auto;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #333;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+.ticksContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.tickWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    /* specific width for hit targeting */
+}
+
+.tick {
+    width: 2px;
+    height: 10px;
+    background-color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.majorTick {
+    height: 20px;
+    width: 3px;
+    background-color: #000;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.targetLabel {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.highlightLabel {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #e8f8f5;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.marker {
+    position: absolute;
+    top: -30px;
+    font-size: 1.5rem;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.targetWrapper:hover .label {
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}

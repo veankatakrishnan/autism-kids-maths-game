@@ -1,0 +1,49 @@
+.groupContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: flex-end;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    min-height: 120px;
+    min-width: 120px;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fafafa;
+    transition: background-color 0.2s;
+}
+
+.groupContainer:hover {
+    background-color: #f0f0f0;
+}
+
+/* 10x10 grid look for Hundred */
+.hundredBlock {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    border: 1px solid #c0392b;
+    position: relative;
+    /* Simulate grid lines if possible, or just solid */
+    background-image: linear-gradient(#c0392b 1px, transparent 1px), linear-gradient(90deg, #c0392b 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* 1x10 look for Ten */
+.tenBlock {
+    width: 10px;
+    height: 100px;
+    background-color: #3498db;
+    border: 1px solid #2980b9;
+    background-image: linear-gradient(#2980b9 1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+/* 1x1 look for One */
+.oneBlock {
+    width: 10px;
+    height: 10px;
+    background-color: #f1c40f;
+    border: 1px solid #f39c12;
+}

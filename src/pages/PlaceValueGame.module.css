@@ -1,0 +1,168 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: #8e44ad;
+    font-size: 2rem;
+}
+
+.score {
+    background-color: #9b59b6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.targetSection {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.targetNumber {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 0.5rem;
+}
+
+.builderArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.column {
+    background-color: #fce4ec;
+    /* Light pink background */
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    min-height: 300px;
+}
+
+.column:nth-child(1) {
+    background-color: #ffcdd2;
+}
+
+/* Hundreds - Reddish */
+.column:nth-child(2) {
+    background-color: #bbdefb;
+}
+
+/* Tens - Blueish */
+.column:nth-child(3) {
+    background-color: #fff9c4;
+}
+
+/* Ones - Yellowish */
+
+.controls {
+    margin-bottom: 1rem;
+}
+
+.controls button {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.columnValue {
+    margin-top: 1rem;
+    padding: 0.6rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+    border: 1px dashed #aaa;
+}
+
+.columnValue strong {
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.currentSum {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mainControls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.resetBtn,
+.checkBtn,
+.nextBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.resetBtn:active,
+.checkBtn:active,
+.nextBtn:active {
+    transform: scale(0.95);
+}
+
+.resetBtn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.checkBtn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.nextBtn {
+    background-color: #3498db;
+    color: white;
+}
+
+.feedback {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}

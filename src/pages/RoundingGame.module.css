@@ -1,0 +1,140 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    outline: none;
+    /* remove default focus outline, add custom if needed */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+.score {
+    background-color: #f1c40f;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.questionSection {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.instruction {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.targetNumber {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.8rem;
+}
+
+.hint {
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.visualSection {
+    margin-bottom: 3rem;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 100px;
+    /* reserve space for feedback to avoid layout shift */
+}
+
+.checkButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkButton:hover:not(:disabled) {
+    background-color: #2980b9;
+}
+
+.checkButton:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.feedbackSuccess,
+.feedbackError {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feedbackSuccess {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedbackError {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.nextButton,
+.retryButton {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.nextButton:hover,
+.retryButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
