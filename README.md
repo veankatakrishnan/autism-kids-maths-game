@@ -6,7 +6,6 @@
 
 **Live Demo:** [Math Explorer on GitHub Pages](https://veankatakrishnan.github.io/autism-kids-maths-game/)
 
----
 
 ## 📌 Overview & Use Case
 
@@ -14,7 +13,6 @@
 
 The application utilizes an elegant, high-contrast **Black & White** minimalist theme. This purposeful design decision completely eliminates colorful, distracting visual clutter (like gradients, bright emojis, or chaotic backgrounds). By limiting sensory input to stark, readable contrasts, it helps autistic learners maintain intense, unbroken focus on the educational task at hand without suffering from sensory overload.
 
----
 
 ## 🚀 Modules & Topics Covered
 
@@ -39,7 +37,6 @@ The application is split into three core interactive Game Modules and one Progre
 *   **Topic**: Session monitoring and growth tracking.
 *   **Use Case**: Allows parents, educators, and the children themselves to visually track their accuracy, streaks, and engagement metrics across all games over time.
 
----
 
 ## 📖 Instructions for First-Time Users
 
@@ -55,7 +52,6 @@ Welcome to Math Explorer! Here is how to get started:
 4.  **Tracking Progress**: At any time, click the **Progress** button in the top navigation bar to view your overall score and accuracy charts.
 5.  **Navigation**: Use the crisp white Navigation Bar at the top to seamlessly switch between games without losing your flow.
 
----
 
 ## 🛠️ Developer Setup (Local Installation)
 
@@ -77,11 +73,6 @@ If you are a developer looking to run this application locally:
     npm run dev
     ```
     The application will be available at `http://localhost:5173`.
-4.  **Deploying Updates**:
-    To push new updates to GitHub Pages, simply run:
-    ```bash
-    npm run deploy
-    ```
 
----
+
 *Created by Veankata Krishnan S M - Full Stack Developer*
