@@ -15,7 +15,7 @@ const Developer = () => {
                     <div className={styles.imageContainer}>
                         {!imgError ? (
                             <img
-                                src="/developer.png"
+                                src={`${import.meta.env.BASE_URL}developer.png`}
                                 alt="Developer"
                                 className={styles.profileImage}
                                 onError={() => setImgError(true)}
