@@ -22,11 +22,16 @@ const NumberLine = ({ start, end, target, highlight, onSelect }) => {
                             onClick={() => onSelect && onSelect(num)}
                             data-interactive="true"
                         >
+                            {isTarget && (
+                                <div className={styles.markerContainer}>
+                                    <div className={styles.pinHead}></div>
+                                    <div className={styles.pinNeedle}></div>
+                                </div>
+                            )}
                             <div className={`${styles.tick} ${num % 5 === 0 ? styles.majorTick : ''}`}></div>
                             <div className={`${styles.label} ${isTarget ? styles.targetLabel : ''} ${isHighlight ? styles.highlightLabel : ''}`}>
                                 {num}
                             </div>
-                            {isTarget && <div className={styles.marker}>📍</div>}
                         </div>
                     );
                 })}

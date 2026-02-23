@@ -5,6 +5,7 @@ import RoundingGame from './pages/RoundingGame';
 import PlaceValueGame from './pages/PlaceValueGame';
 import RomanNumeralsGame from './pages/RomanNumeralsGame';
 import Analytics from './pages/Analytics';
+import Developer from './pages/Developer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="place-value" element={<PlaceValueGame />} />
         <Route path="roman-numerals" element={<RomanNumeralsGame />} />
         <Route path="analytics" element={<Analytics />} />
+        <Route path="developer" element={<Developer />} />
       </Route>
     </Routes>
   );

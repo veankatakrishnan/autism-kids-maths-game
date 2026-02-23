@@ -1,92 +1,122 @@
 .container {
     position: relative;
     width: 100%;
-    padding: 4rem 1rem;
-    overflow-x: auto;
+    height: 120px;
+    margin: 2rem 0;
 }
 
 .line {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    left: 5%;
+    right: 5%;
     height: 4px;
-    background-color: #333;
-    z-index: 1;
-    border-radius: 2px;
+    background-color: #000000;
+    transform: translateY(-50%);
 }
 
 .ticksContainer {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
     display: flex;
     justify-content: space-between;
-    position: relative;
-    z-index: 2;
+    align-items: center;
+    transform: translateY(-50%);
 }
 
 .tickWrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    position: relative;
-    width: 40px;
-    /* specific width for hit targeting */
 }
 
 .tick {
     width: 2px;
-    height: 10px;
-    background-color: #555;
-    margin-bottom: 0.5rem;
+    height: 16px;
+    background-color: #000000;
+    transition: all 0.2s ease;
 }
 
 .majorTick {
-    height: 20px;
-    width: 3px;
-    background-color: #000;
+    height: 24px;
+    width: 4px;
+}
+
+.tickWrapper:hover .tick {
+    background-color: #52525b;
+    transform: scaleY(1.2);
 }
 
 .label {
-    font-size: 0.9rem;
-    color: #666;
-    font-weight: 500;
+    position: absolute;
+    top: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #52525b;
 }
 
 .targetLabel {
-    color: #e74c3c;
-    font-weight: bold;
+    color: #000000;
+    font-weight: 800;
     font-size: 1.2rem;
 }
 
 .highlightLabel {
-    color: #2ecc71;
-    font-weight: bold;
-    font-size: 1.1rem;
-    background-color: #e8f8f5;
-    padding: 2px 4px;
-    border-radius: 4px;
+    color: #000000;
 }
 
-.marker {
+.markerContainer {
     position: absolute;
-    top: -30px;
-    font-size: 1.5rem;
-    animation: bounce 1s infinite;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 1s infinite alternate;
+}
+
+.pinHead {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.pinNeedle {
+    width: 2px;
+    height: 20px;
+    background-color: #000000;
+    margin-top: -2px;
 }
 
 @keyframes bounce {
-
-    0%,
-    100% {
+    from {
         transform: translateY(0);
     }
 
-    50% {
-        transform: translateY(-5px);
+    to {
+        transform: translateY(-8px);
     }
 }
 
-.targetWrapper:hover .label {
-    transform: scale(1.2);
-    transition: transform 0.2s;
+@media (max-width: 600px) {
+    .label {
+        font-size: 0.8rem;
+        top: 25px;
+    }
+
+    .majorTick {
+        height: 18px;
+        width: 3px;
+    }
+
+    .tick {
+        height: 12px;
+    }
 }

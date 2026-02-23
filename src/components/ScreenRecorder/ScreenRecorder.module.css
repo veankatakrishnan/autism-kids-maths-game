@@ -1,87 +1,98 @@
 .container {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
 }
 
-.statusIndicator {
+.button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.8rem;
-    color: #666;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #e4e4e7;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
+.button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.button:disabled {
+    background-color: #f4f4f5;
+    color: #a1a1aa;
+    cursor: not-allowed;
+    border-color: #e4e4e7;
 }
 
 .recording {
-    background-color: #e74c3c;
-    animation: pulse 1.5s infinite;
-}
-
-.controls {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.recordBtn,
-.stopBtn,
-.downloadBtn {
-    border: none;
-    background: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    text-decoration: none;
-    color: inherit;
-}
-
-.recordBtn {
-    color: #2ecc71;
-}
-
-.stopBtn {
-    color: #e74c3c;
-}
-
-.downloadBtn {
-    color: #3498db;
-}
-
-.recordBtn:hover,
-.stopBtn:hover,
-.downloadBtn:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #000000;
+    color: #ffffff;
+    animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
     0% {
-        transform: scale(1);
         opacity: 1;
     }
 
     50% {
-        transform: scale(1.2);
         opacity: 0.7;
     }
 
     100% {
-        transform: scale(1);
         opacity: 1;
     }
+}
+
+.status {
+    margin-right: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    border: 1px solid #000000;
+}
+
+.indicator.idle {
+    background-color: #ffffff;
+}
+
+.indicator.recording {
+    background-color: #000000;
+}
+
+.indicator.error {
+    background-color: #000000;
+    border-style: dashed;
+}
+
+.error {
+    color: #000000;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 1px dashed #000000;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
 }

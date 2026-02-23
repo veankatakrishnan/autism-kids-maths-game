@@ -1,49 +1,84 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    min-height: 250px;
+}
+
+.placeColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 120px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.2s ease;
+}
+
+.placeColumn:hover {
+    background-color: #f4f4f5;
+    border-color: #000000;
+}
+
+.label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .groupContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
-    align-items: flex-end;
-    padding: 10px;
-    border: 1px dashed #ccc;
-    border-radius: 8px;
-    min-height: 120px;
-    min-width: 120px;
+    /* Ensure items wrap over to the next row */
+    flex-direction: row;
+    /* Fill horizontally first! */
+    align-content: flex-start;
     justify-content: center;
-    cursor: pointer;
-    background-color: #fafafa;
-    transition: background-color 0.2s;
+    gap: 8px;
+    width: 100%;
 }
 
-.groupContainer:hover {
-    background-color: #f0f0f0;
+.blocksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 120px;
 }
 
-/* 10x10 grid look for Hundred */
+/* 
+   Distinct monochrome shades with high contrast borders
+*/
 .hundredBlock {
-    width: 100px;
-    height: 100px;
-    background-color: #e74c3c;
-    border: 1px solid #c0392b;
-    position: relative;
-    /* Simulate grid lines if possible, or just solid */
-    background-image: linear-gradient(#c0392b 1px, transparent 1px), linear-gradient(90deg, #c0392b 1px, transparent 1px);
-    background-size: 10px 10px;
+    width: 60px;
+    height: 60px;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* 1x10 look for Ten */
 .tenBlock {
-    width: 10px;
-    height: 100px;
-    background-color: #3498db;
-    border: 1px solid #2980b9;
-    background-image: linear-gradient(#2980b9 1px, transparent 1px);
-    background-size: 10px 10px;
+    width: 12px;
+    height: 60px;
+    background-color: #52525b;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* 1x1 look for One */
 .oneBlock {
-    width: 10px;
-    height: 10px;
-    background-color: #f1c40f;
-    border: 1px solid #f39c12;
+    width: 20px;
+    height: 20px;
+    background-color: #e4e4e7;
+    border: 1px solid #000000;
+    border-radius: 2px;
 }
